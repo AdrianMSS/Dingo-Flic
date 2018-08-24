@@ -1,0 +1,2 @@
+/Users/admin/Documents/Xcities/ionic/todo/platforms/android/platform_www/plugins/cordova-plugin-flic/www/Flic.js
+/Users/admin/Documents/Xcities/ionic/todo/platforms/android/app/src/main/java/com/jguix/cordova/Flic.java

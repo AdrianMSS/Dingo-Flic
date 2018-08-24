@@ -1,0 +1,36 @@
+<ion-header-bar class="bar-stable" style="background: rgb(222, 222, 222); text-align: center;">
+    <svg style="float: left; margin-left: 10px; height: 100%; cursor: pointer;" ng-click="next('groups')" aria-hidden="true" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-left fa-w-10 fa-3x"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z" class=""></path></svg>
+    <label style="margin: auto;">Nueva red</label>
+</ion-header-bar>
+<ion-content class="contentDiv">
+    <div class="contenedor">
+        <div class="div-block-2">
+            Nombre:
+            <div class="colorsGroup">
+                <br>
+                <input ng-model="groupName" type="text" class="input w-input" placeholder="Nombre del grupo"></input>
+                <div class="greenDot2" ng-if="groupColor == 'green'"></div>
+                <div class="purpleDot2" ng-if="groupColor == 'purple'"></div>
+                <div class="redDot2" ng-if="groupColor == 'red'"></div>
+                <div class="pinkDot2" ng-if="groupColor == 'pink'"></div>
+                <div class="yellowDot2" ng-if="groupColor == 'yellow'"></div>
+            </div>
+            <div class="colorsGroup">
+                <div class="greenDot3" ng-click="selectedColor('green')" ></div>
+                <div class="purpleDot3" ng-click="selectedColor('purple')" ></div>
+                <div class="redDot3" ng-click="selectedColor('red')" ></div>
+                <div class="pinkDot3" ng-click="selectedColor('pink')" ></div>
+                <div class="yellowDot3" ng-click="selectedColor('yellow')" ></div>
+            </div>
+            <br><br>
+            <div ng-repeat="contacts in groupContacts" class="colorsGroup">
+                <input style="width: 85%;" ng-change="changeContact($index)" ng-model="contactsAdded[$index]" type="text" class="input w-input" placeholder="Email del contacto"></input>
+                <svg style="width: 20px; margin-left: 10px; margin-top: 10px; height: 20px;" ng-click="newContact()" ng-if="! contacts.added" aria-hidden="true" data-prefix="fas" data-icon="plus-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-plus-circle fa-w-16 fa-3x"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z" class=""></path></svg>
+            </div>
+            <br>
+            <a class="link-2 w-button" ng-click="saveGroup(groupName, groupColor, contactsAdded)">Guardar grupo</a>
+        </div>
+    </div>
+</ion-content>
+    
+    

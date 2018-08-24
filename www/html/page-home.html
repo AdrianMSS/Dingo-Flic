@@ -1,0 +1,33 @@
+<ion-header-bar class="bar-stable" style="background: rgb(222, 222, 222); text-align: center;">
+    <img src="img/Dingo.png" alt="" style="max-width: 20%; margin-left: auto; margin-right: auto;">
+    <svg style="float: right; margin-right: 10px; height: 100%; cursor: pointer;" ng-click="showMenu()"  aria-hidden="true" data-prefix="fal" data-icon="ellipsis-v-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" class="svg-inline--fa fa-ellipsis-v-alt fa-w-6 fa-2x"><path fill="currentColor" d="M96 152c39.8 0 72-32.2 72-72S135.8 8 96 8 24 40.2 24 80s32.2 72 72 72zm0-112c22.1 0 40 17.9 40 40s-17.9 40-40 40-40-17.9-40-40 17.9-40 40-40zm0 144c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm0 112c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm0 64c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm0 112c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z" class=""></path></svg>
+</ion-header-bar>
+<ion-content class="contentDiv">
+    <div class="list dropMenu" ng-if="menuClass">
+        <a class="item item-icon-left" ng-click="goTo('groups')">
+            <i class="icon ion-person-stalker"></i>
+            Redes
+        </a>
+        <a class="item item-icon-left" ng-click="goTo('devices')">
+            <i class="icon ion-wifi"></i>
+            Dispositivo
+        </a>
+        <a class="item item-icon-left">
+            <i class="icon ion-settings"></i>
+            Configuración
+        </a>
+    </div>
+    <div class="contenedor">
+        <div class="div-block-2">
+            <li >{{ messages.email }}</li>
+            <li >{{ messages.name }}</li>
+            <!-- push a new message onto the array -->
+            <form ng-submit="addMessage(newMessageText)">
+                <input ng-model="newMessageText" />
+                <button type="submit">Add Message</button>
+            </form>
+            <a class="link-2 w-button" ng-click="next('grab')">Iniciar</a>
+        </div>
+    </div>
+</ion-content>
+

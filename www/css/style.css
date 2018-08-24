@@ -1,1 +1,141 @@
 /* Empty. Add your own CSS if you like */
+.dropMenu{
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: -10px;
+    margin-right: -20px;
+}
+.contentDiv{
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.devicesDiv{
+    background: white;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.colorsGroup{
+    display: -webkit-flex;
+    margin-top: 10px;
+}
+.greenDot{
+    float: left;
+    margin-right:10px;
+    height: 40px;
+    width: 40px;
+    background: rgb(29, 189, 152);
+    border-radius: 100%;
+}
+.purpleDot{
+    float: left;
+    margin-right:10px;
+    height: 40px;
+    width: 40px;
+    background: rgb(103, 107, 251);
+    border-radius: 100%;
+}
+.redDot{
+    float: left;
+    margin-right:10px;
+    height: 40px;
+    width: 40px;
+    background: rgb(252, 103, 105);
+    border-radius: 100%;
+}
+.pinkDot{
+    float: left;
+    margin-right:10px;
+    height: 40px;
+    width: 40px;
+    background: rgb(253, 109, 252);
+    border-radius: 100%;
+}
+.yellowDot{
+    float: right;
+    height: 20px;
+    width: 20px;
+    background: rgb(254, 203, 47);
+    border-radius: 100%;
+}
+.greenDot2{
+    float: right;
+    height: 20px;
+    width: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background: rgb(29, 189, 152);
+    border-radius: 100%;
+}
+.purpleDot2{
+    float: right;
+    height: 20px;
+    width: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background: rgb(103, 107, 251);
+    border-radius: 100%;
+}
+.redDot2{
+    float: right;
+    height: 20px;
+    width: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background: rgb(252, 103, 105);
+    border-radius: 100%;
+}
+.pinkDot2{
+    float: right;
+    height: 20px;
+    width: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background: rgb(253, 109, 252);
+    border-radius: 100%;
+}
+.yellowDot2{
+    float: right;
+    height: 20px;
+    width: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background: rgb(254, 203, 47);
+    border-radius: 100%;
+}
+.greenDot3{
+    height: 40px;
+    width: 40px;
+    background: rgb(29, 189, 152);
+    border-radius: 100%;
+}
+.purpleDot3{
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    background: rgb(103, 107, 251);
+    border-radius: 100%;
+}
+.redDot3{
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    background: rgb(252, 103, 105);
+    border-radius: 100%;
+}
+.pinkDot3{
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    background: rgb(253, 109, 252);
+    border-radius: 100%;
+}
+.yellowDot3{
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    background: rgb(254, 203, 47);
+    border-radius: 100%;
+}

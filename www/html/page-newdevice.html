@@ -1,0 +1,34 @@
+<ion-header-bar class="bar-stable" style="background: rgb(222, 222, 222); text-align: center;">
+    <svg style="float: left; margin-left: 10px; height: 100%; cursor: pointer;" ng-click="next('devices')" aria-hidden="true" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-left fa-w-10 fa-3x"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z" class=""></path></svg>
+    <label style="margin: auto;">Nuevo dispositivo</label>
+</ion-header-bar>
+<ion-content class="contentDiv">
+    <div class="contenedor">
+        <div class="div-block-2" style="text-align: center;">
+            <img src="img/flic.png" ng-click="lookDevice()" alt="" style="max-width: 40%; margin-left: auto; margin-right: auto;">
+            <br><br>
+            <input style="margin: auto;" ng-model="deviceId" type="text" disabled class="input w-input" placeholder="ID del dispositivo"></input>
+            <br>
+            <input style="margin: auto;" ng-model="deviceName" type="text" class="input w-input" placeholder="Nombre del dispositivo"></input>
+            <br>
+            <select style="margin: auto;" name="select" ng-model="deviceClick">
+                <option value="" selected>Seleccione acción</option>
+                <option value="singleClick">Single click</option> 
+                <option value="doubleClick">Double click</option>
+                <option value="hold">Hold</option>
+            </select>
+            <br><br>
+            <textarea style="margin: auto;" ng-model="deviceText" type="text" class="textarea w-textarea" placeholder="Mensaje del dispositivo"></textarea>
+            <br>
+            Redes asociadas:
+            <div class="colorsGroup">  
+                <div ng-repeat="group in messages.Groups" style="margin-right: 20px;">
+                    <input type="checkbox"  ng-click="addGroup($index)"  ng-model="groupValue[$index]"> {{ group.name }}
+                </div>
+            </div>
+            <br>
+            <a class="link-2 w-button" ng-click="saveDevice(deviceId, deviceName, deviceClick, deviceText, groupValue)">Guardar dispositivo</a>
+        </div>
+    </div>
+</ion-content>
+

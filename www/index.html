@@ -18,6 +18,9 @@
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./webflow/css">
+    <link rel="stylesheet" href="./webflow/protoxyz.webflow.a9e503f44.css">
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -25,21 +28,31 @@
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/cordova/dist/ng-cordova.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
+    <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.3.0/angularfire.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyA65361YDnNpSmErqUlQPI0NyiKyqEW2m4",
+        authDomain: "dingo-51db0.firebaseapp.com",
+        databaseURL: "https://dingo-51db0.firebaseio.com",
+        projectId: "dingo-51db0",
+        storageBucket: "dingo-51db0.appspot.com",
+        messagingSenderId: "581718739931"
+      };
+      firebase.initializeApp(config);
+    </script>
+
     <!-- your app's js -->
     <script src="js/app.js"></script>
   </head>
-  <body ng-app="starter">
-
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
-      <ion-content>
-      </ion-content>
-    </ion-pane>
+  <body style="padding-left: 50px; padding-right: 50px; background: rgb(235,235,235);" ng-app="starter">
+    <div class="page {{ pageClass }}" ng-view></div>   >
   </body>
 </html>
